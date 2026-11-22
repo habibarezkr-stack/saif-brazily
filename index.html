@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Saif Brazily</title><link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+  <script src="config.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+<header><h1>Saif Brazily</h1><p>خدمات ودعم eSIM</p></header>
+<main>
+<section class="panel">
+<h2>تفعيل eSIM</h2><p>افتح صفحة إعداد eSIM الرسمية من Apple على جهازك المتوافق.</p>
+<a class="button" href="https://esimsetup.apple.com/esim_qrcode_provisioning" target="_blank" rel="noopener">فتح إعداد eSIM</a>
+</section>
+<section class="panel">
+<h2>فحص IMEI</h2><p>هذا الفحص يتحقق من صيغة الرقم فقط ولا يؤكد توافق الجهاز مع eSIM.</p>
+<input id="imei" inputmode="numeric" maxlength="15" placeholder="أدخل رقم IMEI المكوّن من 15 رقمًا">
+<button id="check-imei">فحص الرقم</button><p id="imei-result" aria-live="polite"></p>
+</section>
+<section class="panel">
+<h2>حساب المستخدم</h2>
+<div id="auth-area">
+<input id="email" type="email" placeholder="البريد الإلكتروني" autocomplete="email">
+<input id="password" type="password" placeholder="كلمة المرور" autocomplete="current-password">
+<div class="actions"><button id="signup">إنشاء حساب</button><button id="login">تسجيل الدخول</button></div>
+<p id="auth-message" aria-live="polite"></p>
+<button id="logout" hidden>تسجيل الخروج</button>
+</div>
+</section>
+<section class="panel" id="admin-panel" hidden>
+<h2>طلبات الحسابات</h2><div id="pending-users">لا توجد طلبات ظاهرة.</div>
+</section>
+<section class="panel contact"><h2>تواصل معنا</h2><p>صلاتك نجاتك 🤍🤲🏻</p><a href="https://wa.me/201023046241" target="_blank" rel="noopener">تواصل واتساب</a></section>
+</main><footer>© 2026 Saif Brazily</footer>
+</body></html>
